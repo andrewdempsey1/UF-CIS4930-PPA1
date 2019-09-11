@@ -61,7 +61,7 @@ describe('Email verifier checks if an email is valid and either returns true or 
     it('split costs should sum to total cost', () => {
         const bill = {amount: 10, guests: 3};
         var array = splitTip(bill).splitCost;
-        console.log(array);
+        
         var sum = 0;
         for (var i = 0; i < array.length; i++) {
             sum = sum + Number(array[i]);
