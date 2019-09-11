@@ -16,5 +16,7 @@ Run `npm run test` to execute the tests
 
 To run individual tests with a coverage report, run `jest test-name --coverage`
 
+The code for this assignment was developed, ran, and tested on Windows 10.
+
 
 
