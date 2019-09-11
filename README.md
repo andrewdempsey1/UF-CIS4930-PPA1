@@ -1,7 +1,7 @@
 # UF-CIS4930-PPA1
 UF CIS4930 - SW Testing for CD - PPA1 - Intro to Unit Testing &amp; T/BDD 
 
-# Setup Instructions
+### Setup Instructions
 
 This assignment uses NodeJS, npm, and two modules: prompt and readline.
 
