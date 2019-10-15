@@ -1,5 +1,5 @@
 const splitTip = bill => {
-    //console.log(JSON.stringify(arguments)); //.toString()
+    
     if (isNaN(bill.amount) || isNaN(bill.guests)) {
         throw new TypeError('Expected numerical inputs but recieved something else');
     }
