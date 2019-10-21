@@ -6,8 +6,8 @@ const prompt = require('prompt');
 const readline = require('readline');
 
 // to read and write from MySQL database
-const database = require('./database');
-const api = require('./api');
+//const database = require('./database');
+//const api = require('./api');
 
 var rl;
 
