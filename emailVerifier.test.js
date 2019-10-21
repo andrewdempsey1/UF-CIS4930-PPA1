@@ -1,4 +1,5 @@
-const emailVerifier = require('./emailVerifier');
+// use method without database connection (TestDouble will mock the db functions)
+const emailVerifier = require('./emailVerifierTestDouble');
 const test_db = require('./test_db');
 
 describe('Email verifier checks if an email is valid and either returns true or false', function() {

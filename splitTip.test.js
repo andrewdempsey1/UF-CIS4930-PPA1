@@ -1,4 +1,5 @@
-const splitTip = require('./splitTip');
+const splitTip = require('./splitTipTestDouble');
+const test_db = require('./test_db');
 
 describe('Email verifier checks if an email is valid and either returns true or false', function() {
     
@@ -90,3 +91,18 @@ describe('Email verifier checks if an email is valid and either returns true or 
 test('jest framework runs correctly', () => {
     expect(true).toBeTruthy();
 });
+
+// database tests
+test('test database connection', () => {
+    expect(test_db.connect()).toBe('Connected');
+});
+
+test('test inserting new row to database', () => {
+    expect(test_db.insert()).toBe('Inserted');
+});
+
+test('test getting all entires for this function', () => {
+    expect(test_db.getAll('emailVerifier')).toBe('emailVerifier');
+});
+
+

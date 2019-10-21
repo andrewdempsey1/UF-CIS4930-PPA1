@@ -14,9 +14,14 @@ pipeline {
                 sh 'npm install' 
             }
         }
-		stage('Test') {
+		stage('Test - Functions and DB') {
             steps {
                 sh 'npm run test --detectOpenHandles'
+            }
+        }
+        stage('Test - HTTP Rest API') {
+            steps {
+                sh 'npm run test:http --detectOpenHandles'
             }
         }
     }

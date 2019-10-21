@@ -12,6 +12,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:http": "jest --testNamePattern=HttpTest",
     "watch": "jest --watchAll --collectCoverage"
   },
   "author": "Andrew Dempsey",

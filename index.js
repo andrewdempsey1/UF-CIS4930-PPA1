@@ -6,8 +6,8 @@ const prompt = require('prompt');
 const readline = require('readline');
 
 // to read and write from MySQL database
-//const database = require('./database');
-//const api = require('./api');
+const database = require('./database');
+const api = require('./api');
 
 var rl;
 
@@ -47,7 +47,7 @@ var waitForUserInput = function() {
                 });
                 break;
             case 3:
-                //database.get_f('emailVerifier');
+                database.get_f('emailVerifier');
                 rl.close();
                 
                 prompt.get('email', function (err, res) {
@@ -58,7 +58,7 @@ var waitForUserInput = function() {
                 });
                 break;
             case 4:
-                //database.get_f('splitTip');
+                database.get_f('splitTip');
                 rl.close();
                 
                 var bill = {amount: "", guests: ""};

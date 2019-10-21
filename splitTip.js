@@ -1,4 +1,4 @@
-//const database = require('./database');
+const database = require('./database');
 
 const splitTip = bill => {
     
@@ -42,7 +42,7 @@ const splitTip = bill => {
 
     var result = {totalCost: total, splitCost: splitArray};
 
-    //database.save_f('splitTip', JSON.stringify(bill), JSON.stringify(result));
+    database.save_f('splitTip', JSON.stringify(bill), JSON.stringify(result));
 
     return result;
 
