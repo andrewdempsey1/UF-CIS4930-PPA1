@@ -18,11 +18,23 @@ module.exports = {
     get_f: function get_function_date(f_name) {
 
         sql = 'select * from testing.test_functions where f_name = "'+f_name+'" order by date;';
-
+        
         con.query(sql, function (err, result) {
             if (err) throw err;
             console.log("Query Result for "+f_name+" function: " + JSON.stringify(result));
         });
+
+    },
+
+    return_f: function return_function_date(f_name) {
+
+        sql = 'select * from testing.test_functions where f_name = "'+f_name+'" order by date;';
+        var res;
+        con.query(sql, function (err, result) {
+            if (err) throw err;
+            res = result;
+        });
+        return res;
 
     },
 
@@ -46,6 +58,12 @@ module.exports = {
 
     }
 
+}
+
+
+function mockConnection() {
+
+    
 }
 
 
