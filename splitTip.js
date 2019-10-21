@@ -1,3 +1,5 @@
+const database = require('./database');
+
 const splitTip = bill => {
     
     if (isNaN(bill.amount) || isNaN(bill.guests)) {
@@ -22,7 +24,7 @@ const splitTip = bill => {
         }
     }
 
-    var total = Number(bill.amount) * 1.15;
+    var total = (Number(bill.amount) * 1.15).toFixed(2);
     var splitArray = [];
 
     var splitCost = total / bill.guests;
@@ -39,6 +41,8 @@ const splitTip = bill => {
     }
 
     var result = {totalCost: total, splitCost: splitArray};
+
+    database.save_f('splitTip', JSON.stringify(bill), JSON.stringify(result));
 
     return result;
 

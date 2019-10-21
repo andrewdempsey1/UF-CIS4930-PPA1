@@ -5,6 +5,9 @@ const splitTip = require('./splitTip');
 const prompt = require('prompt');
 const readline = require('readline');
 
+// to read and write from MySQL database
+const database = require('./database');
+
 var rl;
 
 var waitForUserInput = function() {
@@ -43,8 +46,9 @@ var waitForUserInput = function() {
                 });
                 break;
             case 3:
-                
+                database.get_f('emailVerifier');
                 rl.close();
+                
                 prompt.get('email', function (err, res) {
                     console.log(emailVerifier(res.email));
                     displayMenu();
@@ -53,7 +57,9 @@ var waitForUserInput = function() {
                 });
                 break;
             case 4:
+                database.get_f('splitTip');
                 rl.close();
+                
                 var bill = {amount: "", guests: ""};
                 prompt.get(['amount', 'guests'], function (err, res) {
                     
